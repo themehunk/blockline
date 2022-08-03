@@ -1,2 +1,0 @@
-# blockline
-blockline block theme
