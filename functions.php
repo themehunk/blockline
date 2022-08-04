@@ -59,3 +59,7 @@ if ( ! function_exists( 'blockline_styles' ) ) :
 endif;
 
 add_action( 'wp_enqueue_scripts', 'blockline_styles' );
+
+
+// Add block patterns
+require get_template_directory() . '/inc/block-pattern.php';

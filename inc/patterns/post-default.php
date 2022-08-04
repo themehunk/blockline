@@ -1,6 +1,12 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"blockline-header"} /-->
-
-<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"inherit":true},"tagName":"main"} -->
+<?php
+/**
+ * Default posts block pattern
+ */
+return array(
+    'title'      => __( 'Default posts', 'blockline' ),
+    'categories' => array( 'query' ),
+    'blockTypes' => array( 'core/query' ),
+    'content'    => '<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"inherit":true},"tagName":"main"} -->
 
 <main class="wp-block-query">
 
@@ -50,6 +56,5 @@
 <!-- wp:query-pagination-next {"fontSize":"small"} /-->
 <!-- /wp:query-pagination -->
 </main>
-<!-- /wp:query -->
-
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"blockline-footer"} /-->
+<!-- /wp:query -->',
+);

@@ -1,12 +1,20 @@
 {
 	"version": 2,
 	"settings": {
-		"appearanceTools": true,
 		"layout": {
-			"contentSize": "760px",
-			"wideSize": "1200px",
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		}
+	},
+
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
 		},
-
-	}
-
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	]
 }
