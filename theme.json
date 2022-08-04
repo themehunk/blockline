@@ -4,9 +4,131 @@
 		"layout": {
 			"contentSize": "840px",
 			"wideSize": "1100px"
+		},
+		"typography": {
+			"dropCap": true,
+			"fontFamilies": [
+				{
+				"fontFamily": "\"Poppins\", serif",
+				"name": "Poppins",
+				"slug": "poppins",
+				"fontFace": [
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Light.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Italic.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Medium.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-SemiBold.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Bold.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-ExtraBold.woff2" ]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/poppins/Poppins-Black.woff2" ]
+						}
+					],
+				   "fontSizes": [
+				{
+					"slug": "tiny",
+					"size": "13px",
+					"name": "Tiny"
+				},
+				{
+					"slug": "extra-small",
+					"size": "14px",
+					"name": "Extra Small"
+				},
+				{
+					"slug": "small",
+					"size": "15px",
+					"name": "Small"
+				},
+				{
+					"slug": "medium",
+					"size": "16px",
+					"name": "Medium"
+				},
+				{
+					"slug": "upper-heading",
+					"size": "18px",
+					"name": "Upper Heading"
+				},
+				{
+					"slug": "normal",
+					"size": "clamp(18px,1.6vw,20px)",
+					"name": "Normal"
+				},
+				{
+					"slug": "content-heading",
+					"size": "clamp(22px,4.2vw,24px)",
+					"name": "Content Heading"
+				},
+				{
+					"slug": "large",
+					"size": "clamp(28px,4.2vw,32px)",
+					"name": "Large"
+				},
+				{
+					"slug": "extra-large",
+					"size": "clamp(32px,6vw,36px)",
+					"name": "Extra large (Recent Post Title)"
+				},
+				{
+					"slug": "huge",
+					"size": "clamp(36px,5.2vw,80px)",
+					"name": "Huge (Display)"
+				}
+			]
+				}
+			]
+
 		}
 	},
-
+	"styles": {},
+	
 	"templateParts": [
 		{
 			"area": "header",
