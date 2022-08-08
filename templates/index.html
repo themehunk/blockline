@@ -1,55 +1,60 @@
 <!-- wp:template-part {"slug":"header","tagName":"header","className":"blockline-header"} /-->
 
-<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"inherit":true},"tagName":"main"} -->
+<!-- wp:group {"align":"full","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group alignfull">
 
-<main class="wp-block-query">
+<!-- wp:column {"width":"66.66%","style":{"spacing":{"padding":{"bottom":"6rem"}}}} -->
+<div class="wp-block-column" style="padding-bottom:6rem;flex-basis:66.66%">	
 
-<!-- wp:post-template {"align":"wide"} -->
+<!-- wp:query {"queryId":0,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
 
-<!-- wp:group {"layout":{"inherit":true}} -->
+<div class="wp-block-query alignwide">
+<!-- wp:post-template -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"layout":{"inherit":false}} -->
+<div class="wp-block-group" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:post-featured-image {"isLink":true} /-->
 
-<div class="wp-block-group">
+<!-- wp:post-title {"isLink":true,"textColor":"foreground"} /-->
 
-<!-- wp:post-title {"isLink":true,"align":"wide","fontSize":"var(--wp--custom--typography--font-size--huge, clamp(2.25rem, 4vw, 2.75rem))"} /-->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:post-terms {"term":"category"} /-->
 
-<!-- wp:post-featured-image {"isLink":true,"align":"wide","style":{"spacing":{"margin":{"top":"calc(1.75 * var(--wp--style--block-gap))"}}}} /-->
-
-<!-- wp:columns {"align":"wide"} -->
-
-<div class="wp-block-columns alignwide">
-
-<!-- wp:column {"width":"100%"} -->
-
-<div class="wp-block-column" style="flex-basis:100%">
-
-<!-- wp:post-terms {"term":"category"} /-->
-
-<!-- wp:post-excerpt /-->
-
-<!-- wp:post-date {"isLink":true,"format":"F j, Y","style":{"typography":{"fontStyle":"italic","fontWeight":"400"}},"fontSize":"small"} /-->
-    
+<!-- wp:post-date {"isLink":true,"style":{"typography":{"fontStyle":"italic","fontWeight":"400","fontSize":"14px"}}} /-->
+	
 </div>
-
-<!-- /wp:column -->
-
-</div>
-
-<!-- /wp:columns -->
-
-</div>
-
 <!-- /wp:group -->
 
+<!-- wp:post-excerpt {"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
+
+</div>
+<!-- /wp:group -->
 <!-- /wp:post-template -->
 
-<!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} -->
-<!-- wp:query-pagination-previous {"fontSize":"small"} /-->
-
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem"}}}} -->
+<div class="wp-block-group" style="padding-top:1rem"><!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
 <!-- wp:query-pagination-numbers /-->
 
-<!-- wp:query-pagination-next {"fontSize":"small"} /-->
+<!-- wp:group {"style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-next /-->
+</div>
+<!-- /wp:group -->
 <!-- /wp:query-pagination -->
-</main>
+</div>
+<!-- /wp:group -->
+</div>
 <!-- /wp:query -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%;">
+	<!-- wp:heading {"level":4,"fontSize":"large"} -->
+					<h4 class="has-large-font-size"><em></em></h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:tag-cloud {"taxonomy":"category","showTagCounts":true} /-->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"blockline-footer"} /-->
