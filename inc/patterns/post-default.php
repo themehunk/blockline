@@ -3,7 +3,7 @@
  * Default posts block pattern
  */
 return array(
-    'title'      => __( 'Default posts', 'blockline' ),
+    'title'      => __( 'Default post', 'blockline' ),
     'categories' => array( 'query' ),
     'blockTypes' => array( 'core/query' ),
     'content'    => '<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"inherit":true},"tagName":"main"} -->
