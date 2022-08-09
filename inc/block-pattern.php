@@ -47,6 +47,7 @@ function blockline_register_block_patterns() {
 	$block_patterns = array(
 		'post-default',
 		'post-grid-sidebar',
+		'header-default',
 	);
 
 	/**
