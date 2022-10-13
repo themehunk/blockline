@@ -19,6 +19,7 @@ function blockline_register_block_patterns() {
 		'header'   => array( 'label' => __( 'Headers', 'blockline' ) ),
 		'query'    => array( 'label' => __( 'Query', 'blockline' ) ),
 		'pages'    => array( 'label' => __( 'Pages', 'blockline' ) ),
+		'blockline'    => array( 'label' => __( 'Blockline', 'blockline' ) ),
 	);
 
 	/**
@@ -45,9 +46,12 @@ function blockline_register_block_patterns() {
 	}
 
 	$block_patterns = array(
-		'post-default',
-		'post-grid-sidebar',
-		'header-default',
+		'hero',
+		'service',
+		'ribbon',
+		'team',
+		'testimonial',
+		'pricing'
 	);
 
 	/**
