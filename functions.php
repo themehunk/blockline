@@ -26,6 +26,12 @@ if ( ! function_exists( 'blockline_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
+		//define
+		define( 'BLOCKLINE_VERSION', '1.0.0' );
+	    define( 'BLOCKLINE_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
+	    define( 'BLOCKLINE_DIR', trailingslashit( get_template_directory() ) );
+	    define( 'BLOCKLINE_URL', trailingslashit( get_template_directory_uri() ) );
+
 	}
 
 endif;
