@@ -10,8 +10,8 @@
 return array(
     'title'      =>__( 'Team Section', 'blockline' ),
     'categories' => array( 'blockline' ),
-    'content'    => '<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"80px","right":"0px","bottom":"80px","left":"0px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:0px;padding-bottom:80px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"padding":{"right":"20px","left":"20px"}}},"layout":{"type":"default"}} -->
+    'content'    => '<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"100px","right":"20px","bottom":"100px","left":"20px"},"margin":{"top":"0","bottom":"0"}},"border":{"bottom":{"color":"#eeeeee","width":"1px"}}},"backgroundColor":"bg-sec","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-bg-sec-background-color has-background" style="border-bottom-color:#eeeeee;border-bottom-width:1px;margin-top:0;margin-bottom:0;padding-top:100px;padding-right:20px;padding-bottom:100px;padding-left:20px"><!-- wp:group {"style":{"spacing":{"padding":{"right":"20px","left":"20px"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="padding-right:20px;padding-left:20px"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"10px","left":"0","right":"0"}}},"fontSize":"extra-large"} -->
 <h2 class="has-text-align-center has-extra-large-font-size" style="margin-right:0;margin-bottom:10px;margin-left:0">Team</h2>
 <!-- /wp:heading -->
@@ -20,8 +20,8 @@ return array(
 <p class="has-text-align-center has-upper-heading-font-size" style="margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0">We have a powerful &amp; hardworking team which works for you.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns {"style":{"spacing":{"padding":{"top":"0px"},"margin":{"top":"50px"}}}} -->
-<div class="wp-block-columns" style="margin-top:50px;padding-top:0px"><!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"default"}} -->
+<!-- wp:columns {"style":{"spacing":{"padding":{"top":"0px"},"margin":{"top":"80px"}}}} -->
+<div class="wp-block-columns" style="margin-top:80px;padding-top:0px"><!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-column" style="padding-right:0;padding-left:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"color":"#d0d0d0","width":"2px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color" style="border-color:#d0d0d0;border-width:2px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"},"right":{"color":"var:preset|color|primary","width":"2px"},"bottom":{"width":"0px","style":"none","color":"var:preset|color|primary"},"left":{"color":"var:preset|color|primary","width":"2px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;border-right-color:var(--wp--preset--color--primary);border-right-width:2px;border-bottom-color:var(--wp--preset--color--primary);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--primary);border-left-width:2px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"id":1895,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"0px","width":"0px","style":"none"},"color":{"duotone":"unset"}},"className":"is-style-default"} -->
@@ -136,3 +136,7 @@ return array(
 <!-- /wp:group --></div>
 <!-- /wp:group -->',
 );
+
+
+
+

@@ -10,8 +10,8 @@
 return array(
     'title'      =>__( 'Service Section', 'blockline' ),
     'categories' => array( 'blockline' ),
-    'content'    => '<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"80px","right":"0px","bottom":"80px","left":"0px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:0px;padding-bottom:80px;padding-left:0px"><!-- wp:group {"layout":{"type":"default"}} -->
+    'content'    => '<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"top":"100px","right":"20px","bottom":"100px","left":"20px"},"margin":{"top":"0","bottom":"0"}},"border":{"bottom":{"color":"#eeeeee","width":"1px"}}},"backgroundColor":"bg-sec","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-bg-sec-background-color has-background" style="border-bottom-color:#eeeeee;border-bottom-width:1px;margin-top:0;margin-bottom:0;padding-top:100px;padding-right:20px;padding-bottom:100px;padding-left:20px"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"10px","left":"0","right":"0"}}},"fontSize":"extra-large"} -->
 <h2 class="has-text-align-center has-extra-large-font-size" style="margin-right:0;margin-bottom:10px;margin-left:0">Services</h2>
 <!-- /wp:heading -->
@@ -20,8 +20,8 @@ return array(
 <p class="has-text-align-center has-upper-heading-font-size" style="margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0">We provides you the best Services.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns {"style":{"spacing":{"padding":{"right":"20px","left":"20px"},"margin":{"top":"50px"}}}} -->
-<div class="wp-block-columns" style="margin-top:50px;padding-right:20px;padding-left:20px"><!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"default"}} -->
+<!-- wp:columns {"style":{"spacing":{"padding":{"right":"20px","left":"20px"},"margin":{"top":"80px"}}}} -->
+<div class="wp-block-columns" style="margin-top:80px;padding-right:20px;padding-left:20px"><!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-column" style="padding-right:0;padding-left:0"><!-- wp:heading {"textAlign":"center","fontSize":"upper-heading"} -->
 <h2 class="has-text-align-center has-upper-heading-font-size">RESPONSIVE DESIGN</h2>
 <!-- /wp:heading -->
