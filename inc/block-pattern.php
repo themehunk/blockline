@@ -12,7 +12,7 @@
  *
  * @return void
  */
-function blockline_register_block_patterns() {
+  function blockline_register_block_patterns() {
 	$block_pattern_categories = array(
 		'featured' => array( 'label' => __( 'Featured', 'blockline' ) ),
 		'footer'   => array( 'label' => __( 'Footers', 'blockline' ) ),

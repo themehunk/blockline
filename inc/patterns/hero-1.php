@@ -6,6 +6,11 @@
  * title: Hero 1 Section
  * categories: blockline
  */
+$strings = array(
+    'title'    => __( 'Blockline Theme', 'blockline' ),
+    'subtitle' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.', 'blockline' ),
+    'button'   => __( 'Learn More', 'blockline' ),
+);
 
 return array(
     'title'      =>__( 'Hero 1 Section', 'blockline' ),
@@ -18,11 +23,11 @@ return array(
 <!-- wp:columns {"verticalAlignment":null} -->
 <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"50%","layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:heading {"style":{"typography":{"fontSize":"4rem"}},"textColor":"bg-prim"} -->
-<h2 class="has-bg-prim-color has-text-color" style="font-size:4rem">Blockline Theme</h2>
+<h2 class="has-bg-prim-color has-text-color" style="font-size:4rem">' . esc_html( $strings['title'] ) . '</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"bg-prim","fontSize":"upper-heading"} -->
-<p class="has-bg-prim-color has-text-color has-upper-heading-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+<p class="has-bg-prim-color has-text-color has-upper-heading-font-size">' . esc_html( $strings['subtitle'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"10px"} -->
@@ -31,7 +36,7 @@ return array(
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"luminous-vivid-orange","textColor":"background","style":{"border":{"radius":"4px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-background-color has-luminous-vivid-orange-background-color has-text-color has-background wp-element-button" style="border-radius:4px">View More</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-background-color has-luminous-vivid-orange-background-color has-text-color has-background wp-element-button" style="border-radius:4px">' . esc_html( $strings['button'] ) . '</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
