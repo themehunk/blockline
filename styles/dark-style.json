@@ -1,32 +1,32 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Dark Style",
+  "title": "Blue Gray Style",
   "version": 2,
   "settings": {
     "color": {
       "palette": [
         {
-          "color": "#1F1F1F",
+          "color": "#abb8c3",
           "name": "Background",
           "slug": "background"
         },
         {
-          "color": "#fff",
+          "color": "#111111",
           "name": "Foreground",
           "slug": "foreground"
         },
         {
-          "color": "#000",
+          "color": "#abb8c3",
           "name": "Bg-Prim",
           "slug": "bg-prim"
         },
         {
-          "color": "#1F1F1F",
+          "color": "#dce3e6",
           "name": "Bg-Sec",
           "slug": "bg-sec"
         },
         {
-          "color": "#00d084",
+          "color": "#000000",
           "name": "Accent",
           "slug": "accent"
         }

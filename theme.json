@@ -97,27 +97,27 @@
 			],
 			"palette": [
 				{
-					"color": "#ffffff",
+					"color": "#0f1629",
 					"name": "Background",
 					"slug": "background"
 				},
 				{
-					"color": "#111",
+					"color": "#fff",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
 				{
-					"color": "#ABB8C3",
+					"color": "#0f1629",
 					"name": "Bg-Prim",
 					"slug": "bg-prim"
 				},
 				{
-					"color": "#DCE3E6",
+					"color": "#161c30",
 					"name": "Bg-Sec",
 					"slug": "bg-sec"
 				},
 				{
-					"color": "#000000",
+					"color": "#ffe68d",
 					"name": "Accent",
 					"slug": "accent"
 				}

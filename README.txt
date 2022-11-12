@@ -5,10 +5,16 @@ Requires at least: 5.8
 Tested up to: 6.0.1
 Stable tag: trunk
 Requires PHP: 7.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+Blockline is an easy-to-use, multi-purpose Full Site Editing WordPress theme.
 
 == Description ==
+
+Blockline is a Free Multipurpose Super Fast WordPress Block Based Full Site Editing Theme. Get Complete Control Over The Design of Your Website.
+Support: https://themehunk.com/contact/ 
+Demo: https://themehunk.com/blockline/
 
 
 
