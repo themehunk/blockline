@@ -2,9 +2,9 @@
 Contributors: themehunk
 Tags: block-patterns
 Requires at least: 5.8
-Tested up to: 6.0.1
-Stable tag: trunk
-Requires PHP: 7.0
+Tested up to: 6.1
+Stable tag: 1.0.0
+Requires PHP: 5.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,14 +27,18 @@ Version 1.0.0
 
 == Resources ==
 
+License for images:
+== Screenshots ==
+
+
 == Poppins Font ==
-License: Apache License, Version 2.0.
-License URL: http://www.apache.org/licenses/
+License: SIL Open Font License (OFL) 1.1
+License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 
 == Theme License & Copyright ==
 
 Blockline is distributed under the terms of the GNU GPL
-Blockline-Copyright 2021, themehunk.com
+Blockline-Copyright 2023, themehunk.com
 License : GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
