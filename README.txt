@@ -1,7 +1,7 @@
 === Blockline ===
 Contributors: themehunk
 Tags: block-patterns
-Requires at least: 5.8
+Requires at least: 6.0
 Tested up to: 6.1
 Stable tag: 1.0.0
 Requires PHP: 5.6
@@ -12,7 +12,8 @@ Blockline is an easy-to-use, multi-purpose Full Site Editing WordPress theme.
 
 == Description ==
 
-Blockline is a Free Multipurpose Super Fast WordPress Block Based Full Site Editing Theme. Get Complete Control Over The Design of Your Website.
+Blockline is a Fast & lightweight Block Based Full Site Editing WordPress Theme. With FSE, users can create custom templates for different pages or sections of the site, as well as use widgets and other design elements to control the appearance and layout of the site. We believe it will revolutionize the way you create and customize your WordPress site. With Blockline you’ll have access to a range of pre-designed templates and custom block patterns, making it easy to create stunning pages and posts without any coding knowledge.
+
 Support: https://themehunk.com/contact/ 
 Demo: https://themehunk.com/blockline/
 
