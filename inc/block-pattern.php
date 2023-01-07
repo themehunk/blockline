@@ -46,6 +46,7 @@
 	}
 
 	$block_patterns = array(
+		'hero-main',
 		'hero',
 		'hero-1',
 		'service',
