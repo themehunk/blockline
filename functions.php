@@ -69,3 +69,6 @@ add_action( 'wp_enqueue_scripts', 'blockline_styles' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-pattern.php';
+
+// Add block Style
+require get_template_directory() . '/inc/block-style.php';
