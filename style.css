@@ -22,10 +22,38 @@ Tags: full-site-editing, block-patterns, one-column, custom-colors, custom-menu,
  * https://github.com/WordPress/gutenberg/issues/35934
  */
 
-body {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-}
+ :root {
+	--wp--custom--core-button--spacing--padding--left: 40px;
+	--wp--custom--core-button--spacing--padding--right: 8px;
+	--wp--custom--core-button--spacing--padding--top: 8px;
+	--wp--custom--core-button--spacing--padding--bottom: 10px;
+	--wp--custom--core-button--color:  var(--wp--preset--color--white);
+	--wp--custom--core-button--color--background: var(--wp--preset--color--primary);
+	--wp--custom--core-button--color-hover:  var(--wp--preset--color--primary);
+	--wp--custom--core-button--color--background-hover: var(--wp--preset--color--secondary);
+	--wp--custom--core-button--box-sizing: border-box;
+	--wp--custom--core-button--word-break: border-box;
+	--wp--custom--core-button--text-align: center;
+	--wp--custom--core-button--border-radius--top-left: 0;
+	--wp--custom--core-button--border-radius--top-right: 0;
+	--wp--custom--core-button--border-radius--bottom-left: 0;
+	--wp--custom--core-button--border-radius--bottom-right: 0;
+	--wp--custom--core-button--typography--font-size: var(--wp--preset--font-size--small);
+	--wp--custom--core-button--typography--font-weight: 500;
+	--wp--custom--core-button--line-height: 1.7; }
+  
+  *,
+  *::before,
+  *::after {
+	box-sizing: inherit; }
+  
+  html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased; }
+  
+  header p a,
+  footer p a {
+	text-decoration: none; }
 
 /*
  * Text and navigation link styles.
@@ -68,17 +96,7 @@ a:active {
 	font-size: var(--wp--preset--font-size--medium);
 	padding: calc(.667em + 2px) calc(1.333em + 2px);
 }
-.wp-site-blocks,
-body > .is-root-container,
-.edit-post-visual-editor__post-title-wrapper,
-.wp-block-group.alignfull,
-.wp-block-group.has-background,
-.wp-block-cover.alignfull,
-.is-root-container .wp-block[data-align="full"] > .wp-block-group,
-.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
-    padding-left: var(--wp--custom--spacing--outer);
-    padding-right: var(--wp--custom--spacing--outer);
-}
+
 /*
  * Button hover styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -89,42 +107,6 @@ body > .is-root-container,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
 	opacity: 0.90;
-}
-
-/*
- * Alignment styles.
- * These rules are temporary, and should not be relied on or
- * modified too heavily by themes or plugins that build on
- * Twenty Twenty-Two. These are meant to be a precursor to
- * a global solution provided by the Block Editor.
- *
- * Relevant issues:
- * https://github.com/WordPress/gutenberg/issues/35607
- * https://github.com/WordPress/gutenberg/issues/35884
- */
-.wp-site-blocks .alignfull,
-.wp-site-blocks > .wp-block-group.has-background,
-.wp-site-blocks > .wp-block-cover,
-.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
-.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
-body > .is-root-container > .wp-block-cover,
-body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
-body > .is-root-container > .wp-block-template-part > .wp-block-cover,
-.is-root-container .wp-block[data-align="full"] {
-	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-	width: unset;
-}
-
-/* Blocks inside columns don't have negative margins. */
-.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
-.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
-/* We also want to avoid stacking negative margins. */
-.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
-.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
-	margin-left: auto !important;
-	margin-right: auto !important;
-	width: inherit;
 }
 
 /*

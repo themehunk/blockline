@@ -1,5 +1,16 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.1/theme.json",
+	"version": 2,
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -136,8 +147,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "1180px",
-			"wideSize": "1180px"
+			"contentSize": "800px",
+			"wideSize": "1280px"
 		},
 		"spacing": {
 			"units": [
@@ -295,6 +306,11 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/columns": {
+				"border": {
+					"radius": "10px"
+				  }
+			},
 			"core/navigation": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
@@ -405,16 +421,5 @@
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "normal"
 		}
-	},
-	"templateParts": [
-		{
-			"area": "header",
-			"name": "header"
-		},
-		{
-			"area": "footer",
-			"name": "footer"
-		}
-	],
-	"version": 2
+	}
 }

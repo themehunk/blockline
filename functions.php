@@ -19,12 +19,19 @@ if ( ! function_exists( 'blockline_support' ) ) :
 	 * @return void
 	 */
 	function blockline_support() {
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
+		add_theme_support( 'align-wide' );
+
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
+
+		// Add support for experimental link color control.
+		add_theme_support( 'experimental-link-color' );
 
 		//define
 		define( 'BLOCKLINE_VERSION', '1.0.0' );

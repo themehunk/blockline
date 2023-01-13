@@ -10,9 +10,9 @@
 return array(
     'title'      =>__( 'Pricing Section', 'blockline' ),
     'categories' => array( 'blockline' ),
-    'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"100px","right":"20px","bottom":"100px","left":"20px"},"margin":{"top":"0","bottom":"0"}},"border":{"bottom":{"color":"#eeeeee","width":"1px"}}},"background":"bg-sec","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-bg-sec-background-color has-background" style="border-bottom-color:#eeeeee;border-bottom-width:1px;margin-top:0;margin-bottom:0;padding-top:100px;padding-right:20px;padding-bottom:100px;padding-left:20px"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"10px","left":"0","right":"0"}}},"fontSize":"extra-large"} -->
+    'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"100px","right":"20px","bottom":"100px","left":"20px"},"margin":{"top":"0","bottom":"0"}},"border":{"bottom":{"color":"#eeeeee","width":"1px"}}},"className":"has-bg-sec-background-color has-background","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group has-bg-sec-background-color has-background" style="border-bottom-color:#eeeeee;border-bottom-width:1px;margin-top:0;margin-bottom:0;padding-top:100px;padding-right:20px;padding-bottom:100px;padding-left:20px"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"10px","left":"0","right":"0"}}},"fontSize":"extra-large"} -->
 <h2 class="has-text-align-center has-extra-large-font-size" style="margin-right:0;margin-bottom:10px;margin-left:0">'.esc_html__( 'Pricing & Packages', 'blockline' ).'</h2>
 <!-- /wp:heading -->
 
