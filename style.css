@@ -75,6 +75,13 @@ a:active {
 	text-decoration: none;
 }
 
+.editor-styles-wrapper .wp-site-blocks > * + *,
+.editor-styles-wrapper .wp-site-blocks > * + * + *,
+.wp-site-blocks > * + *,
+.wp-site-blocks > * + * + * {
+  margin: 0; }
+
+
 .wp-block-navigation .wp-block-navigation-item a:hover,
 .wp-block-navigation .wp-block-navigation-item a:focus {
 	text-decoration-style: solid;

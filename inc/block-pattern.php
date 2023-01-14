@@ -53,7 +53,8 @@
 		'ribbon',
 		'team',
 		'testimonial',
-		'pricing'
+		'pricing',
+		'primary-sidebar'
 	);
 
 	/**

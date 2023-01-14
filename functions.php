@@ -30,6 +30,9 @@ if ( ! function_exists( 'blockline_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
+		add_theme_support( 'responsive-embeds' );
+		
+
 		// Add support for experimental link color control.
 		add_theme_support( 'experimental-link-color' );
 
