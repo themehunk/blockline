@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/blockline/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Blockline is a Fast & lightweight Block Based Full Site Editing WordPress Theme. With FSE, users can create custom templates for different pages or sections of the site, as well as use widgets and other design elements to control the appearance and layout of the site. We believe it will revolutionize the way you create and customize your WordPress site. With Blockline you’ll have access to a range of pre-designed templates and custom block patterns, making it easy to create stunning pages and posts without any coding knowledge.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.0
 Tested up to: 6.1
 Requires PHP: 5.6
@@ -13,7 +13,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 WordPress Available:  yes
 Requires License:     no
 Text Domain: blockline
-Tags: full-site-editing, block-patterns, one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
+Tags: full-site-editing, block-patterns, one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
 */
 
 /*
@@ -147,4 +147,23 @@ font-size:var(--wp--preset--font-size--tiny);
 
 .taxonomy-post_tag.wp-block-post-terms span{
 display:none;
+}
+
+/*
+ * Link Styles
+ */
+
+a:not(
+	.wp-block-search__button,
+	.wp-block-button__link
+) {
+	text-underline-offset: .1rem;
+}
+
+a:not(
+	.wp-block-search__button,
+	.wp-block-button__link
+):focus {
+	text-decoration: underline;
+	text-decoration-style: dotted;
 }
