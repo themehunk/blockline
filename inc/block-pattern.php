@@ -54,7 +54,8 @@
 		'team',
 		'testimonial',
 		'pricing',
-		'primary-sidebar'
+		'primary-sidebar',
+		'footer-default'
 	);
 
 	/**

@@ -42,12 +42,12 @@
     <!-- /wp:image -->
     
     <!-- wp:paragraph -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lorem pretium, laoreet enim at, malesuada elit.</p>
+    <p>'.esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lorem pretium, laoreet enim at, malesuada elit.', 'blockline' ).'</p>
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons -->
     <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"background"} -->
-    <div class="wp-block-button"><a class="wp-block-button__link has-background-color has-primary-background-color has-text-color has-background wp-element-button">Know More</a></div>
+    <div class="wp-block-button"><a class="wp-block-button__link has-background-color has-primary-background-color has-text-color has-background wp-element-button">'.esc_html__('Know More', 'blockline').'</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
     <!-- /wp:group --></div>
@@ -56,7 +56,7 @@
     <!-- wp:group {"style":{"spacing":{"blockGap":"0px","padding":{"top":"40px","right":"40px","bottom":"40px","left":"40px"}}},"backgroundColor":"bg-sec","className":" "} -->
     <div class="wp-block-group has-bg-sec-background-color has-background" style="padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px"><!-- wp:group {"style":{"spacing":{"blockGap":"5px","margin":{"top":"0px","bottom":"0px"},"padding":{"top":"0px","right":"0px","bottom":"10px","left":"0px"}}},"layout":{"inherit":true,"type":"constrained"}} -->
     <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:10px;padding-left:0px"><!-- wp:heading {"level":3,"align":"wide","style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"textColor":"foreground","fontSize":"content-heading"} -->
-    <h3 class="alignwide has-foreground-color has-text-color has-content-heading-font-size" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">Categories</h3>
+    <h3 class="alignwide has-foreground-color has-text-color has-content-heading-font-size" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">'.esc_html__('Categories', 'blockline').'</h3>
     <!-- /wp:heading --></div>
     <!-- /wp:group -->
     
@@ -68,7 +68,7 @@
     <!-- wp:group {"style":{"spacing":{"blockGap":"0px","padding":{"top":"40px","right":"40px","bottom":"40px","left":"40px"}}},"backgroundColor":"bg-sec","className":" "} -->
     <div class="wp-block-group has-bg-sec-background-color has-background" style="padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px"><!-- wp:group {"style":{"spacing":{"blockGap":"5px","margin":{"top":"0px","bottom":"0px"},"padding":{"top":"0px","right":"0px","bottom":"10px","left":"0px"}}},"layout":{"inherit":true,"type":"constrained"}} -->
     <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:10px;padding-left:0px"><!-- wp:heading {"level":3,"align":"wide","style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"textColor":"foreground","fontSize":"content-heading"} -->
-    <h3 class="alignwide has-foreground-color has-text-color has-content-heading-font-size" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">Archive</h3>
+    <h3 class="alignwide has-foreground-color has-text-color has-content-heading-font-size" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">'.esc_html__('Archive', 'blockline').'</h3>
     <!-- /wp:heading --></div>
     <!-- /wp:group -->
     
