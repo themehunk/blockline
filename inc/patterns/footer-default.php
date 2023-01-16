@@ -41,11 +41,11 @@ return array(
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"20px"}}} -->
-<div class="wp-block-column"><!-- wp:heading -->
+<main class="wp-block-column"><!-- wp:heading -->
 <h2>Latest Post</h2>
 <!-- /wp:heading -->
 
-<!-- wp:latest-posts {"style":{"typography":{"lineHeight":"2"}}} /--></div>
+<!-- wp:latest-posts {"style":{"typography":{"lineHeight":"2"}}} /--></main>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
