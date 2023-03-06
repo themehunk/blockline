@@ -75,8 +75,6 @@ function PluginData() {
 
       try {
 
-      console.log(plgdata);
-
        setMessage('Activated');
        setupdateCls('button btn activated disabled');
 
