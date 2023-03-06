@@ -82,3 +82,6 @@ require get_template_directory() . '/inc/block-pattern.php';
 
 // Add block Style
 require get_template_directory() . '/inc/block-style.php';
+
+//theme option panel
+require get_template_directory() . '/theme-option/theme-option.php';
