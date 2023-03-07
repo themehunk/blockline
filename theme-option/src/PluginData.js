@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Fragment} from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
-import Parser from 'html-react-parser';
 
 function PluginData() {
 
