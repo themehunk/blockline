@@ -6,7 +6,7 @@ import RecommendedContent from './RecommendedContent';
 import FeeProContent from './FeeProContent';
 
 const TabContent = (props) => {
-    const [settings, setSettings] = useState({});
+
     const [activeTab, setActiveTab] = useState('welcome');
     const handleTabClick = (tabName) => {
       setActiveTab(tabName);
