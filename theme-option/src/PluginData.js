@@ -72,7 +72,6 @@ function PluginData() {
 
       try {
 
-      console.log(plgdata);
 
        setMessage('Activated');
        setupdateCls('button btn activated disabled');
@@ -113,7 +112,6 @@ function PluginData() {
     let pInit;
     let pStatus;
     
-    console.log(data);
 
     const renderData = Object.keys(data).map((item) => {
 
@@ -165,8 +163,6 @@ function PluginData() {
       </div>
 
   );
-
-
 
 }
 
