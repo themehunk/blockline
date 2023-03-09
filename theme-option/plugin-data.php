@@ -1,26 +1,6 @@
 <?php 
 
-function blockline_plugin_pro_status_array($slug) {
-
-  if(is_dir( WP_PLUGIN_DIR . '/'.$slug)){ 
-    $data_array = array(
-    'slug'=>$slug,
-    'init'=>$slug.'/'.$slug.'.php',
-    'pro_status_active' => is_plugin_active( $slug.'/'.$slug.'.php'),
-    'docs'=>esc_url('https://themehunk.com/docs/'.$slug.'/'),
-  );
-
-  return $data_array;
-
-  }else{
-  
-  return false;
-
-  }
-
-}
-
-function blockline_plugin_lite_status($slug) {
+function blockline_plugin_status($slug) {
  
 return is_plugin_active( $slug.'/'.$slug.'.php');
 
@@ -50,38 +30,34 @@ add_action( 'rest_api_init', function () {
 
 function blockline_theme_option_endpoint_callback() {
 
-    $data = array(
-        'th_advance_product_search' => array(
-        'name' => esc_html__( 'Th Advance Product Search', 'blockline' ),
-        'imgUrl' => 'https://ps.w.org/th-advance-product-search/assets/icon-128x128.gif',
-        'link' => esc_url('https://themehunk.com/advance-product-search/'),
-        'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
-        'slug'=> 'th-advance-product-search',
-        'detail_link' => get_home_url().'/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=th-advance-product-searchs&amp;TB_iframe=true&amp;width=772&amp;height=500',
-        'status_active' => blockline_plugin_lite_status('th-advance-product-search'),
-        'prolink'=> esc_url('https://themehunk.com/advance-product-search/'),
-        'pro_plugin' => blockline_plugin_pro_status_array('th-advance-product-search-pro'),
-        'status_install' => blockline_plugin_install_status('th-advance-product-search')
-        ),
+    $json_data = file_get_contents('data.json');
 
-        'th_product_compare' => array(
-          'name' => esc_html__( 'TH Product Compare', 'blur' ),
-          'imgUrl' => 'https://ps.w.org/th-product-compare/assets/icon-128x128.gif',
-          'link' => esc_url('https://themehunk.com/th-product-compare/'),
-          'active_filename' => 'th-product-compare/th-product-compare.php',
-          'slug'=> 'th-product-compare',
-          'detail_link' => get_home_url().'/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=th-product-compare&amp;TB_iframe=true&amp;width=772&amp;height=500',
-          'status_active' => blockline_plugin_lite_status('th-product-compare'),
-          'prolink'=> esc_url('https://themehunk.com/th-product-compare/'),
-          'pro_plugin' => blockline_plugin_pro_status_array('th-product-compare-pro'),
-          'status_install' => blockline_plugin_install_status('th-advance-product-search')
-      ),
+    $data = json_decode($json_data, true);
+
+    $response_data = array();
+
+    foreach ($data as $key => $value) {
+
+      $response_data[] = array(
+            $key => array(
+            'name'   => $value['name'],
+            'imgUrl' => $value['imgUrl'],
+            'link'   => $value['link'],
+            'slug'   => $value['slug'],
+            'init'   => $value['slug'].'/'.$value['slug'].'.php',
+            'status_active' => blockline_plugin_status($value['slug']),
+            'status_install' => blockline_plugin_install_status($value['slug']),
+            'status_proactive' => blockline_plugin_status($value['slug'].'-pro'),
+            'status_proinstall' => blockline_plugin_install_status($value['slug'].'-pro'),
+            )
+          );
+
+      }
+
+      return $response_data;
+
+   }
     
-    );
-
-    return rest_ensure_response($data);
-
-}
 
 function blockline_install_plugin() {
 
@@ -207,4 +183,3 @@ add_action('wp_ajax_nopriv_blockline_install_plugin', 'blockline_install_plugin'
 
 include_once(ABSPATH . 'wp-admin/includes/plugin-install.php');
 include_once(ABSPATH . 'wp-admin/includes/class-wp-upgrader.php');
-

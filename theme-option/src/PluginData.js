@@ -107,7 +107,6 @@ function PluginData() {
     const { data } = props;
     
     let nameTxt;
-    let detailText;
     let proDiv;
     let pSlug;
     let pInit;
@@ -115,40 +114,47 @@ function PluginData() {
     
     console.log(data);
 
-    const renderData = Object.keys(data).map((item) => {
+    const renderData = data.map((item) => {
 
-    if(data[item].pro_plugin == false){
-    nameTxt = <h4>{data[item].name}</h4>
-    detailText = <a className="plugin-detail thickbox open-plugin-details-modal" href={data[item].detail_link}>{__( 'Details & Version', 'blockline' )}</a>;  
-    proDiv = <a className="doc-link th-go-pro" href={data[item].prolink}> {__( 'Go Pro', 'blockline' )}</a>;
-    pSlug  = data[item].slug;
-    pInit  = data[item].active_filename;
-    pStatus = data[item].status_active;
-    }else{
-    nameTxt = <h4>{data[item].name}<span>{__( 'Pro', 'blockline' )}</span></h4>
-    detailText = <a className="plugin-detail thickbox open-plugin-details-modal" href={data[item].pro_plugin.docs}>{__( 'Documentation', 'blockline' )}</a>;    
-    proDiv='';
-    pSlug = data[item].pro_plugin.slug;
-    pInit  = data[item].pro_plugin.init;
-    pStatus = data[item].pro_plugin.pro_status_active;
-    }
+    const renderDataa = Object.keys(item).map((items) => {
 
-      return (
+      if(item[items].status_proinstall == 'install-now'){
+
+        nameTxt = <h4>{item[items].name}</h4>
+        proDiv = <a className="doc-link th-go-pro" href={item[items].link}> {__( 'Go Pro', 'blockline' )}</a>;
+        pSlug  = item[items].slug;
+        pInit  = `${item[items].slug}/${item[items].slug}.php`;
+        pStatus = item[items].status_active;
+    
+        }else{
+        
+        nameTxt = <h4>{item[items].name}<span>{__( 'Pro', 'blockline' )}</span></h4>
+        proDiv='';
+        pSlug  = `${item[items].slug}-pro`;
+        pInit  = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
+        pStatus = item[items].status_proactive;
+
+        }
+
+        return (
           <div className="th-option-row content-box">
              <div className="th-col">
-              <img src={data[item].imgUrl}/>
+              <img src={item[items].imgUrl}/>
             </div>
             <div className="th-col">
             <div className="title-plugin">
                 {nameTxt}
-                {detailText}
                 {proDiv}
             </div>
-            <Button data-instl={data[item].status_install}  init={pInit} slug={pSlug} actstatus={pStatus} inststatus={data[item].status_install}>                
+            <Button data-instl={item[items].status_install}  init={pInit} slug={pSlug} actstatus={pStatus} inststatus={item[items].status_install}>                
             </Button>
             </div>
           </div>
       );
+
+      });
+
+      return renderDataa;
 
     });
   
