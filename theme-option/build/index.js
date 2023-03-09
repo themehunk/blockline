@@ -317,7 +317,6 @@ function PluginData() {
       });
       const plgdata = await response.text();
       try {
-        console.log(plgdata);
         setMessage('Activated');
         setupdateCls('button btn activated disabled');
       } catch (error) {
@@ -344,7 +343,6 @@ function PluginData() {
     let pSlug;
     let pInit;
     let pStatus;
-    console.log(data);
     const renderData = data.map(item => {
       const renderDataa = Object.keys(item).map(items => {
         if (item[items].status_proinstall == 'install-now') {
