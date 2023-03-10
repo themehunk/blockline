@@ -30,25 +30,26 @@ add_action( 'rest_api_init', function () {
 
 function blockline_theme_option_endpoint_callback() {
 
-    $json_data = file_get_contents('data.json');
+  $directory = trailingslashit( get_template_directory_uri() );
+  // Define the URL
+   $request_json = get_template_directory() . '/theme-option/data.json';
 
-    $data = json_decode($json_data, true);
 
+    $data = wp_json_file_decode($request_json);
     $response_data = array();
 
     foreach ($data as $key => $value) {
-
       $response_data[] = array(
             $key => array(
-            'name'   => $value['name'],
-            'imgUrl' => $value['imgUrl'],
-            'link'   => $value['link'],
-            'slug'   => $value['slug'],
-            'init'   => $value['slug'].'/'.$value['slug'].'.php',
-            'status_active' => blockline_plugin_status($value['slug']),
-            'status_install' => blockline_plugin_install_status($value['slug']),
-            'status_proactive' => blockline_plugin_status($value['slug'].'-pro'),
-            'status_proinstall' => blockline_plugin_install_status($value['slug'].'-pro'),
+            'name'   => $value->name,
+            'imgUrl' => $value->imgUrl,
+            'link'   => $value->link,
+            'slug'   => $value->slug,
+            'init'   => $key.'/'.$value->slug.'.php',
+            'status_active' => blockline_plugin_status($value->slug),
+            'status_install' => blockline_plugin_install_status($value->slug),
+            'status_proactive' => blockline_plugin_status($value->slug.'-pro'),
+            'status_proinstall' => blockline_plugin_install_status($value->slug.'-pro'),
             )
           );
 
