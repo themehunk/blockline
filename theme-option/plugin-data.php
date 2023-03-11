@@ -1,23 +1,59 @@
 <?php 
 
-function blockline_plugin_status($slug) {
- 
-return is_plugin_active( $slug.'/'.$slug.'.php');
+function blockline_pro_free_check($key, $free_init, $pro_init){
 
-}
+  $status = array();
 
+  $free_initi = $free_init.'/'.$free_init.'.php';
 
-function blockline_plugin_install_status($slug) {
+  $pro_initi  = $pro_init.'.php';
 
-  if(is_dir( WP_PLUGIN_DIR . '/'.$slug)){ 
+  if(is_dir( WP_PLUGIN_DIR . '/'.$key.'-pro')){
 
-    return 'installed';
+    $status['prostatus'] = 'installed';
+
+    if(is_plugin_active($pro_initi)){ 
+
+      $status['pro'] = 'true' ;
+    
+      }else{
+      
+      $status['pro'] = 'false';
+
+      }
 
   }else{
 
-    return 'install-now';
+      $status['prostatus'] = 'false';
+
+      $status['pro'] = 'false';
 
   }
+
+  if(is_dir( WP_PLUGIN_DIR . '/'.$key)){
+
+    $status['freestatus'] = 'installed';
+     
+    if(is_plugin_active($free_initi)){ 
+
+      $status['free'] = 'true' ;
+    
+      }else{
+      
+      $status['free'] = 'false';
+
+      }
+
+
+  }else{
+
+      $status['freestatus'] = 'install-now';
+
+      $status['free'] = 'false';
+
+  }
+
+  return $status;
 
 }
 
@@ -30,8 +66,7 @@ add_action( 'rest_api_init', function () {
 
 function blockline_theme_option_endpoint_callback() {
 
-  $directory = trailingslashit( get_template_directory_uri() );
-  // Define the URL
+
    $request_json = get_template_directory() . '/theme-option/data.json';
 
 
@@ -39,17 +74,20 @@ function blockline_theme_option_endpoint_callback() {
     $response_data = array();
 
     foreach ($data as $key => $value) {
+
+      $plugin_status = blockline_pro_free_check($key, $value->init, $value->proInit);
+
       $response_data[] = array(
             $key => array(
             'name'   => $value->name,
             'imgUrl' => $value->imgUrl,
             'link'   => $value->link,
-            'slug'   => $value->slug,
-            'init'   => $key.'/'.$value->slug.'.php',
-            'status_active' => blockline_plugin_status($value->slug),
-            'status_install' => blockline_plugin_install_status($value->slug),
-            'status_proactive' => blockline_plugin_status($value->slug.'-pro'),
-            'status_proinstall' => blockline_plugin_install_status($value->slug.'-pro'),
+            'slug'   => $key,
+            'init'   => $key.'/'.$value->init.'.php',
+            'free'   => $plugin_status['free'],
+            'pro'    => $plugin_status['pro'],
+            'freestatus' => $plugin_status['freestatus'],
+            'prostatus'  => $plugin_status['prostatus'],
             )
           );
 

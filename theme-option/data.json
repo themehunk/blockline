@@ -1,14 +1,16 @@
 {
-    "th_advance_product_search": {
-      "name": "Th Advance Product Search",
-      "imgUrl": "https://ps.w.org/th-advance-product-search/assets/icon-128x128.gif",
-      "link": "https://themehunk.com/advance-product-search/",
-      "slug": "th-advance-product-search"
-    },
-    "th_product_compare": {
-      "name": "TH Product Compare",
-      "imgUrl": "https://ps.w.org/th-product-compare/assets/icon-128x128.gif",
-      "link": "https://themehunk.com/th-product-compare/",
-      "slug": "th-product-compare"
-    }
+  "th-advance-product-search": {
+    "name": "Th Advance Product Search",
+    "imgUrl": "https://ps.w.org/th-advance-product-search/assets/icon-128x128.gif",
+    "link": "https://themehunk.com/advance-product-search/",
+    "init": "th-advance-product-search",
+    "proInit":"th-advance-product-search-pro/th-advance-product-search-pro"
+  },
+  "th-product-compare": {
+    "name": "TH Product Compare",
+    "imgUrl": "https://ps.w.org/th-product-compare/assets/icon-128x128.gif",
+    "link": "https://themehunk.com/th-product-compare/",
+    "init": "th-product-compare",
+    "proInit":"th-product-compare-pro/th-product-compare-pro"
+  }
 }

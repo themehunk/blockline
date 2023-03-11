@@ -288,9 +288,12 @@ function PluginData() {
   if (!data) {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Loading...");
   }
+
+  //console.log(data);
+
   function Button(props, actsts, actcls) {
     if (props.inststatus == 'installed') {
-      if (props.actstatus == true) {
+      if (props.actstatus == 'true') {
         actsts = 'Activated';
         actcls = 'button btn activated disabled';
       } else {
@@ -343,23 +346,26 @@ function PluginData() {
     let pSlug;
     let pInit;
     let pStatus;
+    let pStatusInst;
     const renderData = data.map(item => {
       const renderDataa = Object.keys(item).map(items => {
-        if (item[items].status_proinstall == 'install-now') {
+        if (item[items].prostatus == 'false') {
           nameTxt = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, item[items].name);
           proDiv = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
             className: "doc-link th-go-pro",
             href: item[items].link
           }, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Go Pro', 'blockline'));
           pSlug = item[items].slug;
-          pInit = `${item[items].slug}/${item[items].slug}.php`;
-          pStatus = item[items].status_active;
+          pInit = item[items].init;
+          pStatus = item[items].free;
+          pStatusInst = item[items].freestatus;
         } else {
           nameTxt = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, item[items].name, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Pro', 'blockline')));
           proDiv = '';
           pSlug = `${item[items].slug}-pro`;
           pInit = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
-          pStatus = item[items].status_proactive;
+          pStatus = item[items].pro;
+          pStatusInst = item[items].prostatus;
         }
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
           className: "th-option-row content-box"
@@ -372,11 +378,11 @@ function PluginData() {
         }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
           className: "title-plugin"
         }, nameTxt, proDiv), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Button, {
-          "data-instl": item[items].status_install,
+          "data-instl": pStatusInst,
           init: pInit,
           slug: pSlug,
           actstatus: pStatus,
-          inststatus: item[items].status_install
+          inststatus: pStatusInst
         })));
       });
       return renderDataa;

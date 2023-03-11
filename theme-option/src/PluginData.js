@@ -24,11 +24,13 @@ function PluginData() {
     return <div>Loading...</div>;
   }
 
+  //console.log(data);
+
   function Button(props, actsts, actcls) {
 
     if(props.inststatus == 'installed' ){
      
-      if(props.actstatus == true){
+      if(props.actstatus == 'true'){
 
         actsts = 'Activated';
         actcls = 'button btn activated disabled';
@@ -110,19 +112,21 @@ function PluginData() {
     let pSlug;
     let pInit;
     let pStatus;
+    let pStatusInst;
     
 
     const renderData = data.map((item) => {
 
     const renderDataa = Object.keys(item).map((items) => {
 
-      if(item[items].status_proinstall == 'install-now'){
+      if(item[items].prostatus == 'false'){
 
         nameTxt = <h4>{item[items].name}</h4>
-        proDiv = <a className="doc-link th-go-pro" href={item[items].link}> {__( 'Go Pro', 'blockline' )}</a>;
-        pSlug  = item[items].slug;
-        pInit  = `${item[items].slug}/${item[items].slug}.php`;
-        pStatus = item[items].status_active;
+        proDiv  = <a className="doc-link th-go-pro" href={item[items].link}> {__( 'Go Pro', 'blockline' )}</a>;
+        pSlug   = item[items].slug;
+        pInit   = item[items].init;
+        pStatus = item[items].free;
+        pStatusInst = item[items].freestatus;
     
         }else{
         
@@ -130,7 +134,8 @@ function PluginData() {
         proDiv='';
         pSlug  = `${item[items].slug}-pro`;
         pInit  = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
-        pStatus = item[items].status_proactive;
+        pStatus = item[items].pro;
+        pStatusInst = item[items].prostatus;
 
         }
 
@@ -144,7 +149,7 @@ function PluginData() {
                 {nameTxt}
                 {proDiv}
             </div>
-            <Button data-instl={item[items].status_install}  init={pInit} slug={pSlug} actstatus={pStatus} inststatus={item[items].status_install}>                
+            <Button data-instl={pStatusInst}  init={pInit} slug={pSlug} actstatus={pStatus} inststatus={pStatusInst}>                
             </Button>
             </div>
           </div>
