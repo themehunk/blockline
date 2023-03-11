@@ -1,6 +1,10 @@
 <?php 
 
-function blockline_pro_free_check($key, $free_init, $pro_init){
+  if (!function_exists('is_plugin_active')) {
+  include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+  }
+
+  function blockline_pro_free_check($key, $free_init, $pro_init){
 
   $status = array();
 
@@ -10,7 +14,9 @@ function blockline_pro_free_check($key, $free_init, $pro_init){
 
   if(is_dir( WP_PLUGIN_DIR . '/'.$key.'-pro')){
 
-    $status['prostatus'] = 'installed';
+    $status['status'] = 'pro-installed';
+
+    $status['free'] = 'false';
 
     if(is_plugin_active($pro_initi)){ 
 
@@ -24,32 +30,32 @@ function blockline_pro_free_check($key, $free_init, $pro_init){
 
   }else{
 
-      $status['prostatus'] = 'false';
+      $status['status'] = 'false';
 
       $status['pro'] = 'false';
 
-  }
+      if(is_dir( WP_PLUGIN_DIR . '/'.$key)){
 
-  if(is_dir( WP_PLUGIN_DIR . '/'.$key)){
-
-    $status['freestatus'] = 'installed';
-     
-    if(is_plugin_active($free_initi)){ 
-
-      $status['free'] = 'true' ;
+        $status['status'] = 'free-installed';
+         
+        if(is_plugin_active($free_initi)){ 
+    
+          $status['free'] = 'true' ;
+        
+          }else{
+          
+          $status['free'] = 'false';
+    
+          }
+    
     
       }else{
-      
-      $status['free'] = 'false';
-
+    
+          $status['status'] = 'install-now';
+    
+          $status['free'] = 'false';
+    
       }
-
-
-  }else{
-
-      $status['freestatus'] = 'install-now';
-
-      $status['free'] = 'false';
 
   }
 
@@ -86,8 +92,7 @@ function blockline_theme_option_endpoint_callback() {
             'init'   => $key.'/'.$value->init.'.php',
             'free'   => $plugin_status['free'],
             'pro'    => $plugin_status['pro'],
-            'freestatus' => $plugin_status['freestatus'],
-            'prostatus'  => $plugin_status['prostatus'],
+            'status' => $plugin_status['status'],
             )
           );
 

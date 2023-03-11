@@ -24,11 +24,11 @@ function PluginData() {
     return <div>Loading...</div>;
   }
 
-  //console.log(data);
+  console.log(data);
 
   function Button(props, actsts, actcls) {
 
-    if(props.inststatus == 'installed' ){
+    if(props.inststatus == 'free-installed' || props.inststatus == 'pro-installed' ){
      
       if(props.actstatus == 'true'){
 
@@ -119,23 +119,23 @@ function PluginData() {
 
     const renderDataa = Object.keys(item).map((items) => {
 
-      if(item[items].prostatus == 'false'){
-
-        nameTxt = <h4>{item[items].name}</h4>
-        proDiv  = <a className="doc-link th-go-pro" href={item[items].link}> {__( 'Go Pro', 'blockline' )}</a>;
-        pSlug   = item[items].slug;
-        pInit   = item[items].init;
-        pStatus = item[items].free;
-        pStatusInst = item[items].freestatus;
-    
-        }else{
+      if(item[items].status == 'pro-installed'){
         
         nameTxt = <h4>{item[items].name}<span>{__( 'Pro', 'blockline' )}</span></h4>
         proDiv='';
         pSlug  = `${item[items].slug}-pro`;
         pInit  = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
         pStatus = item[items].pro;
-        pStatusInst = item[items].prostatus;
+        pStatusInst = item[items].status;
+    
+        }else{
+        
+          nameTxt = <h4>{item[items].name}</h4>
+          proDiv  = <a className="doc-link th-go-pro" href={item[items].link}> {__( 'Go Pro', 'blockline' )}</a>;
+          pSlug   = item[items].slug;
+          pInit   = item[items].init;
+          pStatus = item[items].free;
+          pStatusInst = item[items].status;
 
         }
 
