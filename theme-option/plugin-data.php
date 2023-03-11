@@ -8,15 +8,17 @@
 
   $status = array();
 
-  $free_initi = $free_init.'/'.$free_init.'.php';
+  $free_initi = $key.'/'.$free_init.'.php';
 
   $pro_initi  = $pro_init.'.php';
 
-  if(is_dir( WP_PLUGIN_DIR . '/'.$key.'-pro')){
+  if(file_exists( WP_PLUGIN_DIR . '/'.$pro_initi)){
 
     $status['status'] = 'pro-installed';
 
     $status['free'] = 'false';
+
+    $status['init'] = $pro_initi;
 
     if(is_plugin_active($pro_initi)){ 
 
@@ -34,7 +36,9 @@
 
       $status['pro'] = 'false';
 
-      if(is_dir( WP_PLUGIN_DIR . '/'.$key)){
+      $status['init'] = $free_initi;
+
+      if(file_exists( WP_PLUGIN_DIR . '/'.$free_initi)){
 
         $status['status'] = 'free-installed';
          
@@ -89,7 +93,7 @@ function blockline_theme_option_endpoint_callback() {
             'imgUrl' => $value->imgUrl,
             'link'   => $value->link,
             'slug'   => $key,
-            'init'   => $key.'/'.$value->init.'.php',
+            'init'   => $plugin_status['init'],
             'free'   => $plugin_status['free'],
             'pro'    => $plugin_status['pro'],
             'status' => $plugin_status['status'],
