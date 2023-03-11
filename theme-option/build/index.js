@@ -350,8 +350,8 @@ function PluginData() {
         if (item[items].status == 'pro-installed') {
           nameTxt = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, item[items].name, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Pro', 'blockline')));
           proDiv = '';
-          pSlug = `${item[items].slug}-pro`;
-          pInit = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
+          pSlug = item[items].init.split("/").shift();
+          pInit = item[items].init;
           pStatus = item[items].pro;
           pStatusInst = item[items].status;
         } else {

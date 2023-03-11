@@ -122,10 +122,10 @@ function PluginData() {
       if(item[items].status == 'pro-installed'){
         
         nameTxt = <h4>{item[items].name}<span>{__( 'Pro', 'blockline' )}</span></h4>
-        proDiv='';
-        pSlug  = `${item[items].slug}-pro`;
-        pInit  = `${item[items].slug}-pro/${item[items].slug}-pro.php`;
-        pStatus = item[items].pro;
+        proDiv      ='';
+        pSlug       = item[items].init.split("/").shift();
+        pInit       = item[items].init;
+        pStatus     = item[items].pro;
         pStatusInst = item[items].status;
     
         }else{
