@@ -79,7 +79,6 @@ function blockline_theme_option_endpoint_callback() {
 
    $request_json = get_template_directory() . '/theme-option/data.json';
 
-
     $data = wp_json_file_decode($request_json);
     $response_data = array();
 
@@ -149,6 +148,7 @@ if (! is_plugin_active($plugin_init) && $instl == 'install-now') {
   if ( is_wp_error( $api ) ) {
 
 		$status['errorMessage'] = $api->get_error_message();
+    
 		wp_send_json_error( $status );
 
 	}

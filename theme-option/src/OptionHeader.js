@@ -19,7 +19,7 @@ const OptionHeader = () => {
               <div className="th-col2">
                     <div className="th-option-heading">
                        <h2>{sprintf(__( 'Welcome To %s Theme', 'blockline' ), wpapi.themeName)}</h2>
-                       <p>{wpapi.themeName} {__( 'Theme is a Free WooCommerce theme for creating clean and professional shopping stores', 'blockline' )}</p>
+                       <p>{wpapi.themeName} {__( 'Multipurpose WordPress Full Site Editing Theme', 'blockline' )}</p>
                     </div>
                     <div className="th-option-detail">
                         <p className="th-version">{__( 'Version ', 'blockline' )} {wpapi.themeVersion} </p>

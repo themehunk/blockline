@@ -1,4 +1,27 @@
 {
+  "unlimited-blocks": {
+    "name": "Unlimited blocks For Gutenberg",
+    "imgUrl": "https://ps.w.org/unlimited-blocks/assets/icon-128x128.png",
+    "link": "",
+    "init": "unlimited-blocks",
+    "proInit":""
+  },
+  "lead-form-builder": {
+    "name": "Lead Form Builder",
+    "imgUrl": "https://ps.w.org/lead-form-builder/assets/icon-128x128.png",
+    "link": "https://themehunk.com/lead-form-builder/",
+    "init": "lead-form-builder",
+    "proInit":"lead-form-builder-pro/lead-form-builder-pro"
+  },
+  
+  "wp-popup-builder": {
+    "name": "WP Popup Builder",
+    "imgUrl": "https://ps.w.org/wp-popup-builder/assets/icon-128x128.png",
+    "link": "https://themehunk.com/wp-popup-builder/",
+    "init": "wp-popup-builder",
+    "proInit":"wp-popup-builder-pro/wp-popup-builder-pro"
+  },
+  
   "th-advance-product-search": {
     "name": "Th Advance Product Search",
     "imgUrl": "https://ps.w.org/th-advance-product-search/assets/icon-128x128.gif",
@@ -26,40 +49,5 @@
     "link": "https://themehunk.com/th-variation-swatches/",
     "init": "th-variation-swatches",
     "proInit":"th-variation-swatches-pro/th-variation-swatches-pro"
-  },
-  "lead-form-builder": {
-    "name": "Lead Form Builder",
-    "imgUrl": "https://ps.w.org/lead-form-builder/assets/icon-128x128.png",
-    "link": "https://themehunk.com/lead-form-builder/",
-    "init": "lead-form-builder",
-    "proInit":"lead-form-builder-pro/lead-form-builder-pro"
-  },
-  "wp-popup-builder": {
-    "name": "WP Popup Builder",
-    "imgUrl": "https://ps.w.org/wp-popup-builder/assets/icon-128x128.png",
-    "link": "https://themehunk.com/wp-popup-builder/",
-    "init": "wp-popup-builder",
-    "proInit":"wp-popup-builder-pro/wp-popup-builder-pro"
-  },
-  "unlimited-blocks": {
-    "name": "Unlimited blocks For Gutenberg",
-    "imgUrl": "https://ps.w.org/unlimited-blocks/assets/icon-128x128.png",
-    "link": "",
-    "init": "unlimited-blocks",
-    "proInit":""
-  },
-  "woocommerce": {
-    "name": "Woocommerce",
-    "imgUrl": "https://ps.w.org/woocommerce/assets/icon-128x128.png",
-    "link": "",
-    "init": "woocommerce",
-    "proInit":""
-  },
-   "yith-woocommerce-wishlist": {
-    "name": "YITH WooCommerce Wishlist",
-    "imgUrl": "https://ps.w.org/woocommerce/assets/icon-128x128.png",
-    "link": "",
-    "init": "init",
-    "proInit":""
   }
 }
