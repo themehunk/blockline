@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/blockline/
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Blockline is a Fast & lightweight Block Based Full Site Editing WordPress Theme. With FSE, users can create custom templates for different pages or sections of the site, as well as use widgets and other design elements to control the appearance and layout of the site. We believe it will revolutionize the way you create and customize your WordPress site. With Blockline you’ll have access to a range of pre-designed templates and custom block patterns, making it easy to create stunning pages and posts without any coding knowledge.
-Version: 1.0.3
+Version: 1.0.4
 Requires at least: 6.0
 Tested up to: 6.1
 Requires PHP: 5.6
@@ -166,4 +166,14 @@ a:not(
 ):focus {
 	text-decoration: underline;
 	text-decoration-style: dotted;
+}
+.thunk-blog-pattern .wp-block-post-excerpt__more-link{
+	background: var(--wp--preset--color--bg-sec);
+	color: var(--wp--preset--color--foreground);
+	text-decoration: none;
+	padding: 7px 9px;
+}
+.thunk-blog-pattern .wp-block-post-title a{
+	color: var(--wp--preset--color--primary);
+	text-decoration: none;
 }
