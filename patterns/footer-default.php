@@ -28,15 +28,15 @@ return array(
     <!-- /wp:heading -->
     
     <!-- wp:paragraph -->
-    <p><span style="font-size: revert; color: var(--wp--preset--color--accent); font-family: var(--wp--preset--font-family--poppins);"> info@company.com</span></p>
+    <p><span class="dashicons dashicons-email-alt"></span><span style="font-size: revert; color: var(--wp--preset--color--accent); font-family: var(--wp--preset--font-family--poppins);"> info@company.com</span></p>
     <!-- /wp:paragraph -->
     
     <!-- wp:paragraph -->
-    <p>  +123 456 789</p>
+    <p><span class="dashicons dashicons-phone"></span>  +123 456 789</p>
     <!-- /wp:paragraph -->
     
     <!-- wp:paragraph -->
-    <p>  2080 Peaceful Lane, Chicago,IL, USA</p>
+    <p><span class="dashicons dashicons-admin-home"></span>  2080 Peaceful Lane, Chicago,IL, USA</p>
     <!-- /wp:paragraph --></div>
     <!-- /wp:column -->
     
