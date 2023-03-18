@@ -51,6 +51,6 @@ return array(
     <!-- /wp:group -->
     
     <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center">Proudly powered by  <a href="https://themehunk.com/" data-type="URL" data-id="https://themehunk.com/" target="_blank" rel="noreferrer noopener">Themehunk</a></p>
+    <p class="has-text-align-center">Proudly powered by  <a href="'.esc_url('https://themehunk.com/').'" data-type="URL" data-id="https://themehunk.com/" target="_blank" rel="noreferrer noopener">Themehunk</a></p>
     <!-- /wp:paragraph -->',
 );

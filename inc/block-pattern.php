@@ -54,6 +54,7 @@
 		'team',
 		'testimonial',
 		'pricing',
+		'blog-pattern',
 		'primary-sidebar',
 		'footer-default'
 	);
