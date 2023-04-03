@@ -2,8 +2,8 @@
 Contributors: themehunk
 Tags: full-site-editing, block-patterns, one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 6.0
-Tested up to: 6.1
-Stable tag: 1.0.4
+Tested up to: 6.2
+Stable tag: 1.0.5
 Requires PHP: 5.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -20,6 +20,9 @@ Demo: https://themehunk.com/blockline/
 
 
 == Changelog ==
+= 1.0.5 =
+* register_rest_route error resolved.
+
 = 1.0.4 =
 * Blog Pattern Added.
 
