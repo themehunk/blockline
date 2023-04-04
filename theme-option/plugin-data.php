@@ -68,9 +68,10 @@
 }
 
 add_action( 'rest_api_init', function () {
-    register_rest_route( 'wp/v1/', 'blockline', array(
+    register_rest_route( 'wp/v1', 'blockline', array(
         'methods' => 'GET',
         'callback' => 'blockline_theme_option_endpoint_callback',
+        'permission_callback' => '__return_true',
     ) );
 } );
 
