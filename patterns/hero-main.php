@@ -37,7 +37,7 @@ return array(
         
         <!-- wp:buttons -->
         <div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#ffe68d"},"border":{"radius":"34px"}}} -->
-        <div class="wp-block-button"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:34px;background-color:#ffe68d">L' . esc_html( $strings['button'] ) . '</a></div>
+        <div class="wp-block-button"><a class="wp-block-button__link has-background wp-element-button" style="border-radius:34px;background-color:#ffe68d">' . esc_html( $strings['button'] ) . '</a></div>
         <!-- /wp:button --></div>
         <!-- /wp:buttons --></div>
         <!-- /wp:column -->
