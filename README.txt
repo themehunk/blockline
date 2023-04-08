@@ -24,6 +24,7 @@ Demo: https://themehunk.com/blockline/
 * New: Blog Pattern Added.
 * Fix: register_rest_route error resolved.
 * Update: Learn More spelling correction.
+* Update: Blog Patter style improved.
 
 = 1.0.3 =
 * Option Panel Add.
