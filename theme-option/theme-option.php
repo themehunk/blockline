@@ -33,8 +33,10 @@ class Blockline_theme_option{
    
   }
    
-   function blockline_enqueue_scripts() {
-    
+   function blockline_enqueue_scripts($hook_suffix) {
+
+    if($hook_suffix == 'appearance_page_blockline_thunk_started') {
+
     wp_enqueue_style( 'blockline-settings-css', get_template_directory_uri() . '/theme-option/build/style-index.css', array(), '1.0.0', false );
 
     wp_enqueue_script( 'blockline-settings-js', get_template_directory_uri() . '/theme-option/build/index.js', array( 'wp-element', 'wp-i18n' ), '1.0', true );
@@ -51,6 +53,9 @@ class Blockline_theme_option{
           'themeVersion' =>  wp_get_theme()->get( 'Version' ),
         )
     );
+
+    }
+    
    }
 
    function blockline_settings_page() {

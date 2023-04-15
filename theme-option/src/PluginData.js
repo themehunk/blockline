@@ -24,7 +24,7 @@ function PluginData() {
     return <div>Loading...</div>;
   }
 
-  console.log(data);
+
 
   function Button(props, actsts, actcls) {
 
