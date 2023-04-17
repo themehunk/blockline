@@ -22,7 +22,7 @@ Demo: https://themehunk.com/blockline/
 == Changelog ==
 
 = 1.0.5 =
-* Option Panel Issue Fixed.
+* Fix: Option Panel Issue resolved.
 
 = 1.0.4 =
 * New: Blog Pattern Added.
