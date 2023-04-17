@@ -254,7 +254,7 @@ function PluginData() {
   if (!data) {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Loading...");
   }
-  console.log(data);
+ 
   function Button(props, actsts, actcls) {
     if (props.inststatus == 'free-installed' || props.inststatus == 'pro-installed') {
       if (props.actstatus == 'true') {
