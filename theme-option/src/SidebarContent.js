@@ -20,13 +20,7 @@ const SidebarContent = () => {
                <div className="content-box">
                 <h3> {__( 'Leave us a review', 'blockline' )}</h3>
                 <p>{__( 'We would love to hear your feedback.', 'blockline' )}</p>
-                <a href="https://wordpress.org/support/theme/blockline/reviews/?filter=5" className="content-link"> {__( 'Submit review', 'blockline' )}</a>
-               </div>
-               <hr></hr>
-               <div className="content-box">
-                <h3> {__( 'Video Tutorials', 'blockline' )}</h3>
-                <p>{__( 'Want a guide? We have video tutorials to walk you through getting started.', 'blockline' )}</p>
-                <a href="https://www.youtube.com/watch?v=EbH5CRujnYQ" target="_blank" className="content-link"> {__( 'Watch Videos', 'blockline' )}</a>
+                <a href="https://wordpress.org/support/theme/blockline/reviews/?filter=5" className="content-link"> {__( 'Submit Review', 'blockline' )}</a>
                </div>
                <hr></hr>
                <div className="content-box">
