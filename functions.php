@@ -37,7 +37,7 @@ if ( ! function_exists( 'blockline_support' ) ) :
 		add_theme_support( 'experimental-link-color' );
 
 		//define
-		define( 'BLOCKLINE_VERSION', '1.0.7' );
+		define( 'BLOCKLINE_VERSION', '1.0.8' );
 	    define( 'BLOCKLINE_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	    define( 'BLOCKLINE_DIR', trailingslashit( get_template_directory() ) );
 	    define( 'BLOCKLINE_URL', trailingslashit( get_template_directory_uri() ) );
